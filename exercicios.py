@@ -21,9 +21,11 @@ import math
 # 8. Desenvolva um programa que calcule a potência de um número (base e expoente fornecidos pelo usuário).
 # 9. Faça um programa que converta a temperatura de Celsius para Fahrenheit.
 # 10. Escreva um programa que calcule a área de um círculo, recebendo o raio como entrada.
-raio = float(input("Insira o raio do circulo: "))
-area_circulo = math.pi * raio ** 2
-print(f"A area do circulo é {area_circulo:.2f}.")
+    #raio = float(input("Insira o raio do circulo: "))
+    #area_circulo = math.pi * raio ** 2
+    #print(f"A area do circulo é {area_circulo:.2f}.")
+    #
+    #
 # #### Strings (`str`)
 
 # 11. Escreva um programa que receba uma string do usuário e a converta para maiúsculas.
@@ -45,5 +47,45 @@ print(f"A area do circulo é {area_circulo:.2f}.")
 # 21: Conversor de Temperatura
 # 22: Verificador de Palíndromo
 # 23: Calculadora Simples
+
+valid = True
+while valid == True:
+    valor1 = input("Insira o número: ")
+    try:
+        num1 = float(valor1)
+        print(num1)
+        valid = False
+    except:
+        print("O valor informado não é valido. Digite um valor valido.")
+
+valid = False  
+while not valid:
+    oper1 = input("Informe o operador (+, -, *, /): ")
+    if oper1 in ("+", "-", "*", "/"):
+        print(num1, oper1)
+        valid = True
+    else:
+        print("O valor informado não é válido. Digite um valor válido.")
+
+valid = True
+while valid == True:
+    valor2 = input("Insira o número: ")
+    try:
+        num2 = float(valor2)
+        if oper1 == '-':
+            print(f"{num1} {oper1} {num2} = {num1 - num2}")
+            valid = False
+        elif oper1 == '+':
+            print(f"{num1} {oper1} {num2} = {num1 + num2}")
+            valid = False
+        elif oper1 == '*':
+            print(f"{num1} {oper1} {num2} = {num1 * num2}")
+            valid = False
+        elif oper1 == '/':
+            print(f"{num1} {oper1} {num2} = {num1 / num2}")
+            valid = False
+    except:
+        print("O valor informado não é valido. Digite um valor valido.")
+
 # 24: Classificador de Números
 # 25: Conversão de Tipo com Validação
